@@ -1,0 +1,31 @@
+  <ruleset name="Autoruns" id='10678'>
+                <pattern>ossec_archive</pattern>
+        <rules>
+
+        <rule provider="DefensiveDepth" class='10678' id='10678'>
+                        <patterns>
+                                 <pattern>@NUMBER::@@ESTRING::(@@ESTRING::)@ @IPv4::@->@ESTRING::|@@ESTRING:s0:|@@ESTRING::|@@ESTRING::|@@ESTRING::|@@ESTRING:s1:|@@ESTRING::|@@ESTRING:s2:|@@ESTRING:s3:|@@ESTRING::|@@ESTRING:s4:|@@ESTRING::|@@ESTRING:s5:|@</pattern>
+                        </patterns>
+        <examples>
+         <example>
+                <test_message program="ossec_archive">2016 May 20 16:39:21 (DD-COLLECT-PROD) 192.168.160.18->ar-normalized.log AR-LOG|DD-RE2|05/20/2016 12:39:00|4/8/2016 4:42 PM|HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run|Skype|enabled|Logon|DD-RE2\ddadmin|Skype |Skype Technologies S.A.|c:\program files (x86)\skype\phone\skype.exe|7.22.85.109|""C:\Program Files (x86)\Skype\Phone\Skype.exe"" /minimized /regrun|1DBD44E4C19F6EC1665A89ABC884DF56|ADC1CF4AD8C6F944E31E4649BE16B186EE19D793|BCC10DF9F36B1727DBA310827CC2A6AC5C9B0D4D|1DA131F21C1A7BAF8C70272FCE5E4288E021CB434D12A28784344E02CBEA3BFA|169D5B005368A12B6F499F7B655540884BD47D872D74AAD73CD035356DA148A9|A9159194FEF672CA050D5D2DC9E64017</test_message>
+                <!-- hostname-->
+                <test_value name="s0">DD-RE2</test_value>
+                <!-- entry-->
+                <test_value name="s1">Skype</test_value>
+                <!-- category-->
+                <test_value name="s2">Logon</test_value>
+                <!-- profile-->
+                <test_value name="s3">DD-RE2\ddadmin</test_value>
+                <!-- company-->
+                <test_value name="s4">Skype Technologies S.A.</test_value>
+                <!-- path-->
+                <test_value name="s5">c:\program files (x86)\skype\phone\skype.exe</test_value>
+          </example>
+        </examples>
+
+        </rule>
+
+        </rules>
+
+  </ruleset>
