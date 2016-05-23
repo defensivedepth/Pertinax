@@ -1,0 +1,24 @@
+<!--
+Original Authors: 
+Jesús Linares, jesuslinares90@gmail.com
+Josh Brower, Josh@DefensiveDepth.com
+
+Version: 2016.05.23-Rev1
+
+This decoder is licensed under the terms of the MIT license.
+
+This decoder parses Sysinternals' AutoRunsc Logs after they
+have been normalized using the associated ar-normalize script.
+
+Tested with Autorunsc v13.51 & ar-normalize.ps1 
+ -->
+
+<decoder name="autorunsc">
+  <prematch>AR-LOG</prematch>
+</decoder>
+
+<decoder name="arlog">
+  <parent>autorunsc</parent>
+  <regex offset="after_parent">\|\.+\|\.+\|\.+\|\.+\|(\S+)\|\.+\|(\S+)\|\S+\|\.+\|\.+\|(\.+)\|</regex>
+  <order>id,action,url</order>
+</decoder>
