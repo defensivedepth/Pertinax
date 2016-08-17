@@ -4,7 +4,7 @@
 
         <rule provider="DefensiveDepth" class='10678' id='10678'>
                         <patterns>
-                                 <pattern>@NUMBER::@@ESTRING::(@@ESTRING::)@ @IPv4::@->@ESTRING::|@@ESTRING:s0:|@@ESTRING::|@@ESTRING::|@@ESTRING::|@@ESTRING:s1:|@@ESTRING::|@@ESTRING:s2:|@@ESTRING:s3:|@@ESTRING::|@@ESTRING:s4:|@@ESTRING::|@@ESTRING:s5:|@</pattern>
+                                 <pattern>@NUMBER::@@ESTRING::(@@ESTRING::)@ @IPv4::@->@ESTRING::AR-LOG|@@ESTRING:s0:|@@ESTRING::|@@ESTRING::|@@ESTRING::|@@ESTRING:s1:|@@ESTRING::|@@ESTRING:s2:|@@ESTRING:s3:|@@ESTRING::|@@ESTRING:s4:|@@ESTRING::|@@ESTRING:s5:|@</pattern>
                         </patterns>
         <examples>
          <example>
